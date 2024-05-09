@@ -1,0 +1,11 @@
+
+.navbar-nav li{
+    color: brown;
+    
+}
+ .navbar-nav li:hover{
+    background-color: brown;
+    color: white;
+    padding: 0px 5px 0px 5px;
+    border-radius: 20px;
+ }
