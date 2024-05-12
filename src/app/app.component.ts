@@ -6,12 +6,14 @@ import { PicksForYouComponent } from './picks-for-you/picks-for-you.component';
 import { SponsoredItemsComponent } from './sponsored-items/sponsored-items.component';
 import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
+import { HomeComponent } from './home/home.component';
 
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, WatchedItemsComponent, RecentlyViewedComponent, PicksForYouComponent, SponsoredItemsComponent, FooterComponent, HeaderComponent],
+  imports: [RouterOutlet, WatchedItemsComponent, RecentlyViewedComponent, PicksForYouComponent, 
+            SponsoredItemsComponent, FooterComponent, HeaderComponent, HomeComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

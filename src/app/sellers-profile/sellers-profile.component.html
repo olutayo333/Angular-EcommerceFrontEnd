@@ -1,0 +1,43 @@
+<div class="container-fluid mt-5">
+    <div class="row">
+        <div class="col-lg-4 col-11 shadow px-3 py-4 col-11 mx-auto ">
+            <h1 class="my-4 text-center text-primary"><u>Add Product</u></h1>
+            <input type="text" class="form-control mx-auto my-2" placeholder="Product Name" [(ngModel)]= "productName" >
+            <input type="text" class="form-control mx-auto my-2" placeholder="Price" [(ngModel)]= "productPrice" >
+            <input type="text" class="form-control mx-auto my-2" placeholder="Description" [(ngModel)]= "productDescription" >
+            <select class=" my-2 btn btn-small btn-white w-75  mx-auto ms-5 "id=""  value={{all}} style="z-index: 1; " [(ngModel)]= "productCategory" >
+                      <option value="">Select Category</option>
+                      <option value="electronics">Electronics</option>
+                      <option value="motors">Motors</option>
+                      <option value="home and garden">Home & Garden</option>
+                      <option value="clothing">Clothing</option>
+                      <option value="health and beauty">Health and Beauty</option>
+                      <option value="toys">Toys</option>
+                      <option value="bussiness and industrial">Bussiness & Industrial</option>
+                      <option value="collectables">Collectables</option>
+            </select> 
+            
+            <button (click)="addProduct()" class="btn btn-primary w-100" > Add Product  </button> <hr>
+            <hr>
+    
+        </div>
+    
+    </div>
+    <div class="row my-5 mx-auto ms-0 me-0 text-center rounded" style="border: 1px solid black;"> 
+        <h2 style="letter-spacing: 15px; color: burlywood;"><u><b>Electronics</b></u></h2>
+        <p class="fs-2" style="color: #616161;" *ngIf="electronicsArray.length <= 0 ">
+            No Products Yet in this category
+        </p>
+         
+        <div class="" *ngFor="let product of electronicsArray">
+            <div class="col-lg-2 col-12 mx-auto shadow ">
+                <p><img class="mx-auto my-2 d-flex w-75 mx-5" width="75" src={{product.img}} alt=""></p>
+                <p class="ms-1 text-center text-sencondary "><b>{{product.productName}}</b></p>
+                <p class="ms-1 text-center " style="color: brown;"><b>{{product.productPrice}}</b></p>
+                <p> <button class="btn w-100 btn-outline-info"> Edit </button></p>
+                <p> <button class="btn w-100 btn-outline-danger"> Delete </button></p>
+            </div>
+        </div>
+    </div>
+   
+</div>
